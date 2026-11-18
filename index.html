@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Auro Lobo · Joyería masculina en plata 925, acero y vermeil</title>
+  <meta name="description" content="Auro Lobo: pendientes y accesorios masculinos en plata 925, acero 316L y vermeil 18k. Como te ven, te tratan. Tienda en preparación, lanzamiento próximamente.">
+  <meta name="theme-color" content="#0a0a0b">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Auro Lobo">
+  <meta property="og:title" content="Auro Lobo · Hecho para que te vean">
+  <meta property="og:description" content="Pendientes y accesorios masculinos en plata 925, acero 316L y vermeil 18k. La tienda abre muy pronto.">
+  <meta property="og:image" content="assets/lookbook/zaquiel-grafito.webp">
+  <meta property="og:image:alt" content="Zaquiel con americana gris, cadena de plata y pendientes Auro Lobo">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script>
+    document.documentElement.classList.replace('no-js', 'js');
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./js/vendor/three.module.min.js",
+        "three/addons/": "./js/vendor/addons/"
+      }
+    }
+  </script>
+  <script src="js/vendor/gsap.min.js" defer></script>
+  <script src="js/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="js/vendor/lenis.min.js" defer></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="monogram" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M20 26 L23 15 L29 23 L35 23 L41 15 L44 26 L44 34 L32 48 L20 34 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M25 31 L29 32.5 M39 31 L35 32.5 M29.5 41 L32 43.5 L34.5 41" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 24 24">
+      <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <svg class="loader__mark"><use href="#monogram"/></svg>
+      <p class="loader__word">Auro Lobo</p>
+      <div class="loader__bar"><span id="loader-bar"></span></div>
+      <p class="loader__pct"><span id="loader-pct">0</span>%</p>
+    </div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor" aria-hidden="true"><span class="cursor__ring"></span><span class="cursor__dot"></span></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <a class="brand" href="#inicio" aria-label="Auro Lobo, ir al inicio">
+      <svg class="brand__mark" aria-hidden="true"><use href="#monogram"/></svg>
+      <span class="brand__word">Auro <em>Lobo</em></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#coleccion">Colección</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#manifiesto">Manifiesto</a>
+      <a href="#proximamente" class="nav__soon">Próximamente</a>
+    </nav>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav class="menu__nav" aria-label="Menú móvil">
+      <a href="#coleccion"><small>01</small>Colección</a>
+      <a href="#lookbook"><small>02</small>Lookbook</a>
+      <a href="#manifiesto"><small>03</small>Manifiesto</a>
+      <a href="#proximamente"><small>04</small>Próximamente</a>
+    </nav>
+    <div class="menu__foot">
+      <a href="https://www.instagram.com/zaquielofficial/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.youtube.com/@ZaquielOfficial" target="_blank" rel="noopener">YouTube</a>
+      <span>@ZaquielOfficial</span>
+    </div>
+  </div>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__stage">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="hero__canvas canvas-host" id="hero-canvas" data-host="hero" aria-hidden="true"></div>
+        <div class="hero__fallback" aria-hidden="true"></div>
+
+        <div class="hero__meta" aria-hidden="true">
+          <span>N.º 01 — Colección inaugural</span>
+          <span>Plata 925 · Vermeil 18k</span>
+        </div>
+
+        <div class="hero__copy">
+          <p class="eyebrow">Joyería masculina · España</p>
+          <h1 class="hero__title" id="hero-title">
+            <span class="line"><span>Hecho para</span></span>
+            <span class="line"><span>que te <em>vean.</em></span></span>
+          </h1>
+          <p class="hero__lead">«Como te ven, te tratan; y si te ven mal, te maltratan.»</p>
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="#coleccion" data-magnetic>
+              <span>Ver colección</span><svg aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#manifiesto" data-magnetic><span>Manifiesto</span></a>
+          </div>
+        </div>
+
+        <div class="hero__caption" aria-hidden="true">
+          <p class="eyebrow">Aro Lobo · 12 mm</p>
+          <p class="hero__caption-title">Plata 925, pulido espejo.<br><em>Oro como acento.</em></p>
+        </div>
+
+        <div class="hero__scroll" aria-hidden="true"><span>Desliza</span><i></i></div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-label="Plata 925, acero 316L hipoalergénico, vermeil 18k, envío desde España. Hecho para hombres que se presentan bien.">
+      <div class="marquee__track" aria-hidden="true">
+        <span>Plata 925</span><i></i><span>Acero 316L hipoalergénico</span><i></i><span>Vermeil 18k</span><i></i><span>Envío desde España</span><i></i><span>Hecho para hombres que se presentan bien</span><i></i>
+        <span>Plata 925</span><i></i><span>Acero 316L hipoalergénico</span><i></i><span>Vermeil 18k</span><i></i><span>Envío desde España</span><i></i><span>Hecho para hombres que se presentan bien</span><i></i>
+      </div>
+    </div>
+
+    <!-- COLECCIÓN -->
+    <section class="section collection" id="coleccion" aria-labelledby="col-title">
+      <div class="section__head">
+        <p class="eyebrow"><span class="idx">01</span> La vitrina</p>
+        <h2 class="section__title" id="col-title">Colección <em>inaugural</em></h2>
+        <p class="section__intro">Seis piezas para empezar. Pocas, bien hechas, pensadas para llevarse a diario: del despacho al gimnasio y a la cena sin quitarse nada.</p>
+      </div>
+
+      <div class="rail-wrap">
+        <ul class="rail" id="rail">
+          <li class="piece" data-id="aro-lobo">
+            <article class="piece__card">
+              <button class="piece__media" type="button" aria-label="Ver detalle de Aro Lobo">
+                <img src="assets/productos/aros-plata.webp" alt="Pareja de aros huggie de plata 925 sobre pizarra oscura" width="1152" height="864" loading="lazy" decoding="async">
+                <span class="piece__glare" aria-hidden="true"></span>
+                <span class="piece__num" aria-hidden="true">01</span>
+              </button>
+              <div class="piece__info">
+                <p class="piece__mat">Huggie · Plata 925</p>
+                <h3 class="piece__name">Aro Lobo</h3>
+                <div class="piece__row">
+                  <p class="piece__price">39 €</p>
+                  <button class="add-btn" type="button" data-add aria-label="Añadir Aro Lobo">Añadir</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="piece" data-id="cruz-norte">
+            <article class="piece__card">
+              <button class="piece__media" type="button" aria-label="Ver detalle de Cruz Norte">
+                <img src="assets/productos/cruz-plata.webp" alt="Pendiente de aro con cruz colgante de plata sobre fondo azul claro" width="1152" height="864" loading="lazy" decoding="async">
+                <span class="piece__glare" aria-hidden="true"></span>
+                <span class="piece__num" aria-hidden="true">02</span>
+              </button>
+              <div class="piece__info">
+                <p class="piece__mat">Pendiente cruz · Plata 925</p>
+                <h3 class="piece__name">Cruz Norte</h3>
+                <div class="piece__row">
+                  <p class="piece__price">45 €</p>
+                  <button class="add-btn" type="button" data-add aria-label="Añadir Cruz Norte">Añadir</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="piece" data-id="sello-aureo">
+            <article class="piece__card">
+              <button class="piece__media" type="button" aria-label="Ver detalle de Sello Áureo">
+                <img src="assets/productos/oro-studs-sello.webp" alt="Dos pendientes de botón y un anillo sello en vermeil dorado sobre fondo gris" width="1152" height="864" loading="lazy" decoding="async">
+                <span class="piece__glare" aria-hidden="true"></span>
+                <span class="piece__num" aria-hidden="true">03</span>
+              </button>
+              <div class="piece__info">
+                <p class="piece__mat">Studs + sello · Vermeil 18k</p>
+                <h3 class="piece__name">Sello Áureo</h3>
+                <div class="piece__row">
+                  <p class="piece__price">89 €</p>
+                  <button class="add-btn" type="button" data-add aria-label="Añadir Sello Áureo">Añadir</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="piece" data-id="cadena-imperio">
+            <article class="piece__card">
+              <button class="piece__media" type="button" aria-label="Ver detalle de Cadena Imperio">
+                <img src="assets/productos/cadena-cubana.webp" alt="Cadena cubana de plata sobre tejido azul noche" width="1152" height="864" loading="lazy" decoding="async">
+                <span class="piece__glare" aria-hidden="true"></span>
+                <span class="piece__num" aria-hidden="true">04</span>
+              </button>
+              <div class="piece__info">
+                <p class="piece__mat">Cubana 5 mm · Plata 925</p>
+                <h3 class="piece__name">Cadena Imperio</h3>
+                <div class="piece__row">
+                  <p class="piece__price">129 €</p>
+                  <button class="add-btn" type="button" data-add aria-label="Añadir Cadena Imperio">Añadir</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="piece" data-id="brazalete-ejecutivo">
+            <article class="piece__card">
+              <button class="piece__media" type="button" aria-label="Ver detalle de Brazalete Ejecutivo">
+                <img src="assets/productos/brazalete-acero.webp" alt="Brazalete rígido abierto de acero inoxidable cepillado sobre fondo gris claro" width="1152" height="864" loading="lazy" decoding="async">
+                <span class="piece__glare" aria-hidden="true"></span>
+                <span class="piece__num" aria-hidden="true">05</span>
+              </button>
+              <div class="piece__info">
+                <p class="piece__mat">Rígido · Acero 316L</p>
+                <h3 class="piece__name">Brazalete Ejecutivo</h3>
+                <div class="piece__row">
+                  <p class="piece__price">35 €</p>
+                  <button class="add-btn" type="button" data-add aria-label="Añadir Brazalete Ejecutivo">Añadir</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="piece" data-id="anillo-manada">
+            <article class="piece__card">
+              <button class="piece__media" type="button" aria-label="Ver detalle de Anillo Manada">
+                <img src="assets/productos/anillo-lobo.webp" alt="Anillo de plata oxidada con cabeza de lobo en relieve sobre piedra oscura" width="1152" height="864" loading="lazy" decoding="async">
+                <span class="piece__glare" aria-hidden="true"></span>
+                <span class="piece__num" aria-hidden="true">06</span>
+              </button>
+              <div class="piece__info">
+                <p class="piece__mat">Sello grabado · Plata oxidada</p>
+                <h3 class="piece__name">Anillo Manada</h3>
+                <div class="piece__row">
+                  <p class="piece__price">59 €</p>
+                  <button class="add-btn" type="button" data-add aria-label="Añadir Anillo Manada">Añadir</button>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <div class="rail-ctrl" aria-label="Navegación de la colección">
+          <button class="rail-ctrl__btn" type="button" id="rail-prev" aria-label="Pieza anterior">
+            <svg aria-hidden="true" style="transform:scaleX(-1)"><use href="#arrow"/></svg>
+          </button>
+          <p class="rail-ctrl__count" aria-live="polite"><span id="rail-current">01</span> / <span>06</span></p>
+          <button class="rail-ctrl__btn" type="button" id="rail-next" aria-label="Pieza siguiente">
+            <svg aria-hidden="true"><use href="#arrow"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="collection__note">Precios orientativos de lanzamiento. Imágenes de producto de muestra.</p>
+    </section>
+
+    <!-- MANIFIESTO -->
+    <section class="section manifesto" id="manifiesto" aria-labelledby="man-title">
+      <div class="manifesto__grid">
+        <div class="manifesto__side">
+          <p class="eyebrow"><span class="idx">02</span> Manifiesto</p>
+          <h2 class="visually-hidden" id="man-title">Manifiesto</h2>
+        </div>
+        <div class="manifesto__body">
+          <p class="manifesto__text" data-split>No hacemos joyas para llamar la atención. Las hacemos para que la atención, cuando llegue, te encuentre preparado. Un aro bien elegido, una cadena a la altura justa, un anillo con historia: detalles pequeños que dicen mucho antes de que abras la boca.</p>
+
+          <blockquote class="motto">
+            <p><span>Como te ven,</span> <span>te tratan;</span> <em>y si te ven mal,</em> <em>te maltratan.</em></p>
+            <footer>— Zaquiel</footer>
+          </blockquote>
+
+          <div class="manifesto__story">
+            <p>Auro Lobo nace en el canal <a href="https://www.youtube.com/@ZaquielOfficial" target="_blank" rel="noopener">@ZaquielOfficial</a>, de conversaciones sobre presencia, disciplina y estilo con hombres que quieren progresar.</p>
+            <p>Es para el que sale de casa con americana, pasa por el gimnasio y llega a la cena sin perder presencia. Para el que lleva rastas y traje con la misma naturalidad. Plata que aguanta, acero que no da alergia, oro solo donde suma.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOOKBOOK -->
+    <section class="lookbook" id="lookbook" aria-labelledby="lb-title">
+      <div class="lookbook__pin">
+        <div class="lb-intro" id="lb-intro">
+          <p class="eyebrow"><span class="idx">03</span> Lookbook</p>
+          <h2 class="section__title" id="lb-title">Cómo <em>combinarlos</em></h2>
+          <p class="section__intro">Cinco reglas que Zaquiel aplica cada día. Ninguna es obligatoria; todas funcionan.</p>
+          <p class="lb-intro__hint" aria-hidden="true">Desliza <svg><use href="#arrow"/></svg></p>
+        </div>
+        <div class="lookbook__track" id="lb-track">
+
+          <figure class="look">
+            <div class="look__img"><img src="assets/lookbook/zaquiel-grafito.webp" alt="Zaquiel con americana gris sobre fondo grafito, aro pequeño de plata y cadena fina" width="682" height="1024" loading="eager" decoding="async"></div>
+            <figcaption><span class="look__n">01 / 05</span><strong>Oficina</strong>Un aro pequeño y reloj, nada más.</figcaption>
+          </figure>
+          <figure class="look">
+            <div class="look__img"><img src="assets/lookbook/zaquiel-negro.webp" alt="Zaquiel con rastas recogidas en lo alto y pendiente de plata visible, fondo negro" width="681" height="1024" loading="lazy" decoding="async"></div>
+            <figcaption><span class="look__n">02 / 05</span><strong>Rastas recogidas</strong>El pendiente es protagonista.</figcaption>
+          </figure>
+          <figure class="look">
+            <div class="look__img"><img src="assets/lookbook/zaquiel-cadena.webp" alt="Zaquiel sujetando la cadena de plata sobre el pecho, americana abierta" width="682" height="1024" loading="lazy" decoding="async"></div>
+            <figcaption><span class="look__n">03 / 05</span><strong>Noche</strong>Cadena por fuera de la camisa abierta.</figcaption>
+          </figure>
+          <figure class="look">
+            <div class="look__img"><img src="assets/lookbook/zaquiel-azul.webp" alt="Zaquiel con americana gris sobre fondo azul noche, cadena y pendientes" width="682" height="1024" loading="lazy" decoding="async"></div>
+            <figcaption><span class="look__n">04 / 05</span><strong>Mezcla metales con intención</strong>Plata dominante, oro como acento.</figcaption>
+          </figure>
+          <figure class="look">
+            <div class="look__img"><img src="assets/lookbook/zaquiel-solapa.webp" alt="Zaquiel ajustándose las solapas de la americana, pulsera y cadena discretas" width="682" height="1024" loading="lazy" decoding="async"></div>
+            <figcaption><span class="look__n">05 / 05</span><strong>Menos es más</strong>Máximo tres piezas visibles.</figcaption>
+          </figure>
+        </div>
+        <div class="lookbook__progress" aria-hidden="true"><span id="lb-progress"></span></div>
+      </div>
+    </section>
+
+    <!-- CONFIANZA -->
+    <section class="section trust" aria-labelledby="trust-title">
+      <div class="section__head section__head--row">
+        <p class="eyebrow"><span class="idx">04</span> Garantías</p>
+        <h2 class="section__title section__title--sm" id="trust-title">Lo que prometemos <em>al lanzar</em></h2>
+      </div>
+      <ul class="trust__list">
+        <li>
+          <svg class="trust__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5 L39 11 V23 C39 32 32.5 39.5 24 43 C15.5 39.5 9 32 9 23 V11 Z"/><path d="M17 24 L22 29 L31 19"/></svg>
+          <h3>Hipoalergénico</h3>
+          <p>Acero 316L y plata con níquel conforme a REACH. Para llevar todo el día.</p>
+          <span class="tag">Al lanzar</span>
+        </li>
+        <li>
+          <svg class="trust__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 17 L14 11 H34 L40 17 V31 L34 37 H14 L8 31 Z"/><text x="24" y="28.5" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="12" letter-spacing="1" fill="currentColor" stroke="none">925</text></svg>
+          <h3>Plata contrastada 925</h3>
+          <p>Cada pieza de plata con su ley grabada. Sin baños que se van en un mes.</p>
+          <span class="tag">Al lanzar</span>
+        </li>
+        <li>
+          <svg class="trust__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 14 H30 V32 H6 Z"/><path d="M30 20 H37 L42 26 V32 H30"/><circle cx="14" cy="34" r="3.5"/><circle cx="35" cy="34" r="3.5"/></svg>
+          <h3>Envío 24/48 h</h3>
+          <p>Desde España a toda la península, en embalaje discreto y protegido.</p>
+          <span class="tag">Al lanzar</span>
+        </li>
+        <li>
+          <svg class="trust__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M38 24 A14 14 0 1 1 33.9 14.1"/><path d="M34 6 V14.5 H25.5"/><path d="M24 17 V24 L29 27"/></svg>
+          <h3>Devolución 30 días</h3>
+          <p>Si no te convence en mano, la devuelves. Sin preguntas incómodas.</p>
+          <span class="tag">Al lanzar</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- PRÓXIMAMENTE -->
+    <section class="soon" id="proximamente" aria-labelledby="soon-title">
+      <div class="soon__light" aria-hidden="true"></div>
+      <div class="soon__canvas canvas-host" id="soon-canvas" data-host="soon" aria-hidden="true"></div>
+      <div class="soon__inner">
+        <p class="eyebrow"><span class="idx">05</span> Próximamente</p>
+        <h2 class="soon__title" id="soon-title">La tienda abre <em>muy pronto.</em></h2>
+        <p class="soon__lead">Síguenos para ser el primero. Lanzamientos, piezas limitadas y cómo llevarlas, primero en el canal.</p>
+        <div class="soon__actions">
+          <a class="btn btn--solid" href="https://www.instagram.com/zaquielofficial/" target="_blank" rel="noopener" data-magnetic>
+            <span>Instagram</span><small>@zaquielofficial</small>
+          </a>
+          <a class="btn btn--ghost" href="https://www.youtube.com/@ZaquielOfficial" target="_blank" rel="noopener" data-magnetic>
+            <span>YouTube</span><small>@ZaquielOfficial</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <a class="brand brand--lg" href="#inicio" aria-label="Auro Lobo, volver arriba">
+        <svg class="brand__mark" aria-hidden="true"><use href="#monogram"/></svg>
+        <span class="brand__word">Auro <em>Lobo</em></span>
+      </a>
+      <nav class="footer__social" aria-label="Redes sociales">
+        <a href="https://www.instagram.com/zaquielofficial/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@ZaquielOfficial" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@zaquielofficial" target="_blank" rel="noopener">TikTok</a>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Auro Lobo</p>
+      <p>Prototipo · tienda en preparación</p>
+      <p>Imágenes de producto de muestra</p>
+    </div>
+  </footer>
+
+  <!-- Detalle de pieza -->
+  <dialog class="detail" id="detail" aria-labelledby="detail-name">
+    <div class="detail__inner">
+      <button class="detail__close" type="button" id="detail-close" aria-label="Cerrar detalle">
+        <span></span><span></span>
+      </button>
+      <div class="detail__media">
+        <img id="detail-img" src="assets/productos/aros-plata.webp" alt="" width="1152" height="864">
+        <p class="detail__num" id="detail-num">01 / 06</p>
+      </div>
+      <div class="detail__body">
+        <p class="eyebrow" id="detail-mat">Plata 925</p>
+        <h2 class="detail__name" id="detail-name">Aro Lobo</h2>
+        <p class="detail__desc" id="detail-desc"></p>
+        <dl class="detail__specs">
+          <div><dt>Material</dt><dd id="detail-material"></dd></div>
+          <div><dt>Medida</dt><dd id="detail-size"></dd></div>
+          <div><dt>Precio</dt><dd id="detail-price"></dd></div>
+        </dl>
+        <div class="variant" role="radiogroup" aria-label="Acabado (vista previa)">
+          <p class="variant__label">Acabado <span>· vista previa</span></p>
+          <div class="variant__opts">
+            <button type="button" role="radio" aria-checked="true" data-variant="plata"><i class="sw sw--plata"></i>Plata</button>
+            <button type="button" role="radio" aria-checked="false" data-variant="oro"><i class="sw sw--oro"></i>Oro</button>
+          </div>
+        </div>
+        <div class="detail__actions">
+          <button class="btn btn--solid" type="button" data-add><span>Añadir</span></button>
+          <a class="btn btn--ghost" href="https://www.instagram.com/zaquielofficial/" target="_blank" rel="noopener"><span>Próximamente</span></a>
+        </div>
+        <p class="detail__note">Tienda en preparación. El cambio de acabado es solo una simulación visual.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="grain" aria-hidden="true"></div>
+</body>
+</html>
