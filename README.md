@@ -1,56 +1,57 @@
-# Auro Lobo · prototipo web 3D
+# Auro Lobo · escaparate previo al lanzamiento
 
-Escaparate estático de **Auro Lobo**, marca de pendientes y accesorios masculinos en plata 925, acero 316L y vermeil 18k, creada por Zaquiel ([@ZaquielOfficial](https://www.youtube.com/@ZaquielOfficial)).
+Web estática de pendientes y accesorios masculinos de Zaquiel Mayorga, preparada para GitHub Pages en `/aurolobo/`. `index.html` en la raíz, rutas relativas y `.nojekyll`. Sin build, checkout, pagos, formularios, analítica ni recogida de datos.
 
-Es un **prototipo**: no hay tienda, ni pagos, ni formularios. Los botones «Añadir» solo muestran el aviso «Tienda en preparación · lanzamiento próximamente», y las llamadas a la acción llevan a Instagram y YouTube.
+**Estado:** mejoras implementadas en la copia local, rama `mejora-fable`. La revisión visual en navegador está pendiente: el entorno de ejecución bloquea tanto el servidor HTTP como el arranque de Chrome. Detalles y errores en [qa/ENTREGA.md](qa/ENTREGA.md). No se ha publicado nada.
 
-## Qué incluye
+## Contenido y comportamiento
 
-- **Hero 3D en tiempo real** (Three.js r170): aro huggie de plata, aro de vermeil y stud, con materiales PBR (`MeshPhysicalMaterial` + `RoomEnvironment`/`PMREMGenerator`), luz cálida de acento y polvo dorado. Reacciona al ratón, al giroscopio y al tacto en móvil. Con el scroll, la cámara se acerca y la joya gira (GSAP ScrollTrigger).
-- El mismo canvas reaparece en la sección **Próximamente**. Solo hay un contexto WebGL y deja de renderizar cuando no está a la vista o la pestaña está oculta.
-- **Vitrina de colección**: en escritorio, tilt 3D con brillo especular y foco en la pieza señalada (el resto se atenúa). En móvil, carrusel con snap, contador `01 / 06` y flechas. Al tocar una pieza se abre un panel de detalle (`<dialog>`, se cierra con Esc) con un cambio de acabado Plata / Oro que es solo visual.
-- **Manifiesto** que se revela palabra a palabra al hacer scroll.
-- **Lookbook** horizontal fijado (pinned) en escritorio, con parallax en los retratos; en móvil, scroll horizontal nativo con snap.
-- Bloque de garantías, CTA final, footer, cursor personalizado, botones magnéticos, Lenis (smooth scroll) y grano sutil.
-- **Accesibilidad y rendimiento**: `lang="es"`, textos alternativos, foco visible y `aria-*`. Respeta `prefers-reduced-motion` (escena estática, sin animaciones de scroll). Si no hay WebGL, muestra una imagen de respaldo. El devicePixelRatio está limitado (1,25 en móvil y 1,75 en escritorio).
-
-## Estructura
-
-```
-index.html
-favicon.svg
-.nojekyll
-css/styles.css
-js/main.js          # interacción, scroll, vitrina, modal, lookbook
-js/scene.js         # escena Three.js
-js/vendor/          # three 0.170.0, RoomEnvironment, gsap 3.12.5, ScrollTrigger, lenis 1.1.13
-assets/productos/   # fotos de producto (muestra)
-assets/lookbook/    # retratos de Zaquiel
-```
-
-Las librerías están **vendorizadas** en `js/vendor/`: no hay paso de build ni dependencia de CDN. Solo las fuentes (Cormorant Garamond + Manrope) se cargan desde Google Fonts.
+- Hero editorial y dos huggies conceptuales en Three.js: banda biselada, apertura, pasador y bisagra visibles en la geometría. Oscilación acotada, DPR limitado, render limitado a unos 30 fps y pausado fuera de pantalla o con la pestaña oculta.
+- Un solo renderer se mueve entre hero y cierre. Las cajas de las escenas reservan espacio para los rótulos. Imagen de respaldo sin WebGL y contenido legible antes de cargar la escena.
+- Seis tarjetas de colección, carrusel móvil y diálogo con detalles conceptuales. Todos los precios muestran **«Precio al lanzar»**. «Próximamente» muestra un aviso, sin carrito ni pedido.
+- Manifiesto con retrato real y el lema de Zaquiel. Lookbook con cinco fotos reales, desplazamiento nativo, controles y teclado.
+- Menú móvil con fondo inerte, foco contenido y cierre con Escape. Anclas con espacio para la cabecera fija. Respeta `prefers-reduced-motion`, también si cambia durante la sesión.
+- CTA únicamente a [Instagram](https://www.instagram.com/zaquielofficial/) y [YouTube](https://www.youtube.com/@ZaquielOfficial).
+- Canonical y Open Graph absolutos de Pages. La imagen social es una copia JPEG del retrato original, sin alterar su composición.
 
 ## Verla en local
 
-Los módulos ES requieren servidor HTTP (abrir el archivo con doble clic no funciona):
+Desde este directorio:
 
 ```bash
-cd site
-python3 -m http.server 8000
-# abre http://localhost:8000
+cd /workspace/aurolobo-mejora
+python3 -m http.server 8770
 ```
 
-## Publicar en GitHub Pages
+Abrir `http://localhost:8770/`. Los módulos ES necesitan HTTP; abrir el HTML mediante `file://` no inicializa correctamente la escena.
 
-1. Crea un repositorio y sube el **contenido** de esta carpeta (que `index.html` quede en la raíz).
-2. En *Settings → Pages*, elige *Deploy from a branch*, la rama `main` y la carpeta `/ (root)`.
-3. Se publicará en `https://<usuario>.github.io/<repo>/`. Todas las rutas son relativas, así que funciona en esa subruta sin cambiar nada. El archivo `.nojekyll` evita el procesado de Jekyll.
+## Verificación
 
-Cuando se compre el dominio, basta con configurarlo en *Settings → Pages → Custom domain*.
+No se necesita instalar nada global. El chequeo estático usa Python y Node; el de navegador utiliza el Playwright de Python ya disponible y `/usr/bin/google-chrome`.
 
-## Aviso sobre las imágenes
+```bash
+python3 qa/verificar.py --static
+# Con el servidor anterior activo, en otra terminal:
+python3 qa/verificar.py --base-url http://127.0.0.1:8770/
+```
 
-- Las **fotos de producto** (`assets/productos/`) son **imágenes de muestra generadas con IA**. No representan el producto final.
-- Los **retratos del lookbook** (`assets/lookbook/`) son fotografías reales de **Zaquiel**, fundador de la marca.
+El segundo comando genera las capturas de escritorio 1440×900 y móvil 390×844 en `qa/after/`, además de revisar menú, diálogos, carruseles, consola, recursos, desbordes, movimiento reducido, ausencia de WebGL/JS y subruta `/aurolobo/`. Un bloqueo o fallo devuelve un código distinto de cero y queda en `qa/checks-browser.json`. Las capturas resultantes están en `qa/after/` (también hay página completa de escritorio y móvil).
 
-© 2026 Auro Lobo · Prototipo · tienda en preparación.
+## Archivos
+
+- `index.html`, `css/styles.css`: estructura, contenido y diseño responsive.
+- `js/main.js`: navegación, menú, carruseles, detalles y avisos.
+- `js/scene.js`: geometría y renderer 3D compartido.
+- `js/vendor/`: Three.js y RoomEnvironment locales. Las antiguas librerías GSAP/ScrollTrigger/Lenis siguen vendorizadas, pero ya no se cargan.
+- `assets/fonts/`: Cormorant Garamond y Manrope locales, en WOFF, con caracteres latinos y licencia OFL. No hay peticiones a Google Fonts.
+- `qa/AUDITORIA.md`, `qa/ENTREGA.md`: diagnóstico y entrega; `qa/before/` conserva las diez referencias originales.
+
+## Aviso sobre productos e imágenes
+
+Las imágenes de `assets/productos/` son **muestras generadas con IA**, no el producto final. Los retratos `assets/lookbook/zaquiel-*.webp` son **fotografías reales de Zaquiel**. La escena 3D representa conceptos, no especificaciones de una pieza a la venta.
+
+Los nombres y materiales de las tarjetas son referencias del concepto de colección. Faltan fotos reales de producto, materiales definitivos, medidas, acabados, precios, condiciones comerciales y fecha de lanzamiento. Se han retirado las antiguas promesas de alergias, envío y devolución no confirmadas.
+
+## Publicación
+
+El push de `origin` continúa desactivado. Los comandos propuestos para cuando Zaquiel apruebe la revisión están en `qa/ENTREGA.md`; **no se han ejecutado**. Subir la rama de propuesta no modifica una web de Pages configurada para `main`: requiere integrar allí la propuesta aprobada.
