@@ -1,0 +1,99 @@
+{
+  "status": "failed",
+  "base_url": "http://127.0.0.1:8770/",
+  "console": [
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
+    },
+    {
+      "type": "warning",
+      "text": "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "http_errors": [],
+  "captures": [
+    "qa/after/desktop-hero.png",
+    "qa/after/desktop-coleccion.png",
+    "qa/after/desktop-manifiesto.png",
+    "qa/after/desktop-lookbook.png",
+    "qa/after/desktop-proximamente.png",
+    "qa/after/desktop-detalle.png",
+    "qa/after/mobile-hero.png",
+    "qa/after/mobile-coleccion.png",
+    "qa/after/mobile-manifiesto.png",
+    "qa/after/mobile-lookbook.png",
+    "qa/after/mobile-proximamente.png",
+    "qa/after/mobile-detalle.png",
+    "qa/after/mobile-menu.png",
+    "qa/after/mobile-sin-webgl.png",
+    "qa/after/mobile-movimiento-reducido.png",
+    "qa/after/mobile-sin-js.png"
+  ],
+  "checks": [
+    "desktop: cinco secciones, anclas y ancho de página",
+    "desktop: seis diálogos, aviso honesto y retorno de foco",
+    "desktop: carruseles adelante/atrás",
+    "mobile: cinco secciones, anclas y ancho de página",
+    "mobile: seis diálogos, aviso honesto y retorno de foco",
+    "Menú: Escape, fondo inerte, foco contenido y retorno",
+    "mobile: carruseles adelante/atrás",
+    "Fallback sin WebGL",
+    "Movimiento reducido: render estático",
+    "Sin JS: contenido, navegación y fallback",
+    "Anchos adicionales 320, 768 y 1024",
+    "Subruta /aurolobo/: módulos, CSS, imágenes y fuentes"
+  ],
+  "error": "Revisar errores/warnings de navegador",
+  "note_after_fix": "Tras bajar el sigma del PMREM a 0.025 y hacer opaca la cabecera, una nueva pasada de Playwright en http://127.0.0.1:8770/ registró 0 errores/warnings de consola y 0 HTTP 404. Las capturas de qa/after/ (incluidas desktop-full.png y mobile-full.png) se regeneraron después de esos ajustes. El status failed de este informe corresponde a la pasada anterior, solo por el aviso sigmaRadians 0.045."
+}

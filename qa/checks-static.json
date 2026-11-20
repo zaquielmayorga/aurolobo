@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "resources_checked": 24,
+  "duplicate_ids": 0,
+  "product_price_placeholders": 6,
+  "errors": [],
+  "limits": "Análisis estático: no certifica respuestas HTTP, consola, encuadre ni layout."
+}
